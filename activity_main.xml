@@ -17,8 +17,14 @@
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/tv_name"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    view.setOnClickListener(onClickListener);
+    <view
+        android:id="@+id/button"
+        android:onClick="OnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="OnClick" />
 
 </android.support.constraint.ConstraintLayout>
