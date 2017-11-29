@@ -1,30 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hunting.task1.MainActivity">
+    android:gravity="center_vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/Image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+
+        android:layout_above="@+id/account"
+        android:layout_marginBottom="22dp"
+        android:layout_toEndOf="@+id/btn2" />
 
     <TextView
-        android:id="@+id/tv_hello"
+        android:id="@+id/textView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/account"
+        android:layout_alignBottom="@+id/account"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="71dp"
+        android:text="ID:"
+        android:textSize="24px" />
+
+    <EditText
+        android:id="@+id/account"
+        android:layout_width="114dp"
+        android:layout_height="46dp"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:minWidth="220px"
+        android:text="请输入用户名"
+        android:textSize="24px" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_alignBottom="@+id/password"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/password"
+        android:text="Password:"
+        android:textSize="24px" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="112dp"
+        android:layout_height="34dp"
+        android:layout_alignStart="@+id/account"
+        android:layout_below="@+id/account"
+        android:layout_marginTop="15dp"
+        android:minWidth="220px"
+        android:text="请输入密码"
+        android:textSize="24px" />
+
+    <Button
+        android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    view.setOnClickListener(onClickListener);
-    <view
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/password"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="34dp"
+        android:text="注册" />
+
+    <Button
         android:id="@+id/button"
-        android:onClick="OnClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:ignore="OnClick" />
+        android:layout_alignBaseline="@+id/btn2"
+        android:layout_alignBottom="@+id/btn2"
+        android:layout_marginStart="44dp"
+        android:layout_toEndOf="@+id/btn2"
+        android:text="登录" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
